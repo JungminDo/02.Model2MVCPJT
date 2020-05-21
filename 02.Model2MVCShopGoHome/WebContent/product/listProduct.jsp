@@ -17,6 +17,8 @@
 %>
 --%>
 
+
+
 <html>
 <head>
 <title>상품 목록조회</title>
@@ -36,7 +38,6 @@ function fncGetProductList(currentPage) {
 <body bgcolor="#ffffff" text="#000000">
 
 <div style="width:98%; margin-left:10px;">
-<c:if test="${!empty param.menu && param.menu=='manage'}">
 <form name="detailForm" action="/listProduct.do?menu=manage"
 								 method="post">
 
@@ -156,7 +157,6 @@ function fncGetProductList(currentPage) {
 <!--  페이지 Navigator 끝 -->
 
 </form>
-</c:if>
 
 
 <c:if test="${!empty param.menu && param.menu=='search'}">

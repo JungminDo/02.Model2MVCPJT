@@ -1,4 +1,4 @@
-package com.model2.mvc.service.purchase.dao;
+package com.model2.mvc.service.purchase.impl;
 
 import com.model2.mvc.common.Search;
 import com.model2.mvc.common.util.DBUtil;
