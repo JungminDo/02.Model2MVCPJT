@@ -47,11 +47,13 @@ public class ProductServiceImpl implements ProductService {
 		 productDao.updateProduct(product);
 		
 	}
-
+	@Override
 	public void insertProduct(Product product) throws Exception {
 		productDao.insertProduct(product);
 		
 	}
+
+
 
 
 

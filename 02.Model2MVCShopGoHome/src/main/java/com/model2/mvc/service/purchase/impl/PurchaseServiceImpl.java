@@ -4,8 +4,8 @@ import java.util.Map;
 
 import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.Purchase;
+import com.model2.mvc.service.purchase.PurchaseDAO;
 import com.model2.mvc.service.purchase.PurchaseService;
-import com.model2.mvc.service.purchase.dao.PurchaseDAO;
 
 public class PurchaseServiceImpl implements PurchaseService {
 
