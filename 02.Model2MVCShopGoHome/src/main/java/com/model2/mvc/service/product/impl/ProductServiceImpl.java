@@ -10,7 +10,10 @@ import org.springframework.stereotype.Service;
 
 import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.Product;
+<<<<<<< HEAD
 import com.model2.mvc.service.domain.Purchase;
+=======
+>>>>>>> refs/heads/first/save
 import com.model2.mvc.service.domain.User;
 import com.model2.mvc.service.product.ProductService;
 import com.model2.mvc.service.product.ProductDao;
@@ -49,6 +52,12 @@ public class ProductServiceImpl implements ProductService {
 		
 	}
 	@Override
+	public void insertProduct(Product product) throws Exception {
+		productDao.insertProduct(product);
+		
+	}
+
+
 	public void insertProduct(Product product) throws Exception {
 		productDao.insertProduct(product);
 		
