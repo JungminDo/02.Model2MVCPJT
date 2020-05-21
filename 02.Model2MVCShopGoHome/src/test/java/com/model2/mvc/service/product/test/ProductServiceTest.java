@@ -69,7 +69,7 @@ public class ProductServiceTest {
 	}
 	
 
-	//@Test
+	@Test
 	public void testGetProduct() throws Exception {
 		
 		Product product = new Product();
