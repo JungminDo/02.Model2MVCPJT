@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="02.Model2MVCPJT">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-=======
->>>>>>> refs/heads/new/dev
-=======
->>>>>>> refs/heads/new/dev
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
         <dependent-module archiveName="ojdbc14.jar" deploy-path="/WEB-INF/lib/" handle="module:/resource/ojdbc14/ojdbc14">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <property name="context-root" value="02.Model2MVCShopGoHome"/>
-        <property name="java-output-path" value="/02.Model2MVCShopGoHome/build/classes"/>
-=======
         <property name="java-output-path" value="/02.Model2MVCPJT/build/classes"/>
         <property name="context-root" value="02.Model2MVCPJT"/>
->>>>>>> refs/heads/new/dev
-=======
-        <property name="java-output-path" value="/02.Model2MVCPJT/build/classes"/>
-        <property name="context-root" value="02.Model2MVCPJT"/>
->>>>>>> refs/heads/new/dev
     </wb-module>
 </project-modules>
