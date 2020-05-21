@@ -5,8 +5,13 @@ import java.util.Map;
 import com.model2.mvc.common.Search;
 import com.model2.mvc.service.domain.Purchase;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.model2.mvc.service.purchase.PurchaseService;
 import com.model2.mvc.service.purchase.dao.PurchaseDAO;
+=======
+import com.model2.mvc.service.purchase.PurchaseDAO;
+import com.model2.mvc.service.purchase.PurchaseService;
+>>>>>>> refs/heads/new/dev
 =======
 import com.model2.mvc.service.purchase.PurchaseDAO;
 import com.model2.mvc.service.purchase.PurchaseService;

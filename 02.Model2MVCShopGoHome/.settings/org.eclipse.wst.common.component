@@ -2,7 +2,10 @@
     <wb-module deploy-name="02.Model2MVCPJT">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+=======
+>>>>>>> refs/heads/new/dev
 =======
 >>>>>>> refs/heads/new/dev
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
@@ -12,8 +15,13 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <property name="context-root" value="02.Model2MVCShopGoHome"/>
         <property name="java-output-path" value="/02.Model2MVCShopGoHome/build/classes"/>
+=======
+        <property name="java-output-path" value="/02.Model2MVCPJT/build/classes"/>
+        <property name="context-root" value="02.Model2MVCPJT"/>
+>>>>>>> refs/heads/new/dev
 =======
         <property name="java-output-path" value="/02.Model2MVCPJT/build/classes"/>
         <property name="context-root" value="02.Model2MVCPJT"/>

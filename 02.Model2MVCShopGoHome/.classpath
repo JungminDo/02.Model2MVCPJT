@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<classpathentry excluding="main/java/|main/resources/|test/java/" kind="src" path="src"/>
+=======
+>>>>>>> refs/heads/new/dev
 =======
 >>>>>>> refs/heads/new/dev
 	<classpathentry kind="src" path="src/main/java"/>
