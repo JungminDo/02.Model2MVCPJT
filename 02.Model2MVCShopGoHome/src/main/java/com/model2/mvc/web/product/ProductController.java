@@ -57,9 +57,9 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/getProduct.do")
-	public String getProduct( @RequestParam("product") int prodNo , Model model ) throws Exception {
+	public String getProduct( @RequestParam("prodNo") int prodNo , Model model ) throws Exception {
 		
-		System.out.println("/getProduct.do");
+		System.out.println("/getProduct.do ÇÁ·Î´öÆ®ÄÁÆ®·Ñ·¯ °Ù");
 		//Business Logic
 		Product product = productService.getProduct(prodNo);
 		// Model °ú View ¿¬°á
@@ -69,9 +69,9 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/updateProductView.do")
-	public String updateProductView( @RequestParam("productNo") int prodNo , Model model ) throws Exception{
+	public String updateProductView(@RequestParam("prodNo") int prodNo , Model model ) throws Exception{
 
-		System.out.println("/updateProductView.do");
+		System.out.println("/updateProductView.do ¾÷µ¥ÀÌÆ®ÇÁ·Î´öÆ®ºä");
 		//Business Logic
 		Product product = productService.getProduct(prodNo);
 		// Model °ú View ¿¬°á
@@ -81,10 +81,12 @@ public class ProductController {
 	}
 	
 	@RequestMapping("/updateProduct.do")
-	public String updateProduct( @ModelAttribute("product") Product product , Model model , HttpSession session) throws Exception{
+	public String updateProduct( @ModelAttribute("product") Product product, Model model , HttpSession session) throws Exception{
 
-		System.out.println("/updateProduct.do");
+		System.out.println("/updateProduct.do ¾÷µ¥ÀÌÆ®ÇÁ·Î´öÆ® µÎ");
+		
 		//Business Logic
+		int prodNo = product.getProdNo();
 		productService.updateProduct(product);
 		
 //		String sessionId=((Product)session.getAttribute("product")).getProdNo();
@@ -92,7 +94,9 @@ public class ProductController {
 //			session.setAttribute("product", product);
 //		}
 //		
-		return "redirect:/getProduct.do?prodNo="+product.getProdNo();
+	
+		return "forward:/getProduct.do?prodNo="+prodNo;
+		
 	}
 	
 	@RequestMapping("/listProduct.do")

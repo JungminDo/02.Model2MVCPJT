@@ -8,7 +8,7 @@
  	
  	
 	<resultMap id="productSelectMap" type="product">
-		<result property="prodNo" 		column="prod_no" 				jdbcType="NUMERIC"/>
+		<result property="prodNo" 		column="prod_no" 				jdbcType="INTEGER"/>
 		<result property="prodName"		column="prod_name" 				jdbcType="VARCHAR" />
 		<result property="prodDetail" 	column="prod_detail" 			jdbcType="VARCHAR" />
 		<result property="manuDate" 	column="manufacture_day" 			jdbcType="VARCHAR" />
@@ -28,7 +28,7 @@
 	<!--  SQL : SELECT ONE -->
 	 <select 	id="getProduct"	parameterType="string"	resultMap="productSelectMap">
 		SELECT
-		  prod_no, image_file , manufacture_day , price , prod_detail ,  prod_name   , reg_date 		
+		  prod_no, prod_name, image_file , manufacture_day , price , prod_detail, reg_date 		
 		FROM product 
 		WHERE prod_no = #{value}
 	 </select>
@@ -39,9 +39,9 @@
 	   	<set>
 	   		prod_name 	= #{prodName} ,
 			prod_detail	= #{prodDetail},
-			manuDate 		= #{manuDate} ,
+			manufacture_day = #{manuDate} ,
 			price			=	#{price},
-			fileName		= #{fileName},
+			image_file		= #{fileName},
 			prod_no			= #{prodNo}
 	   	</set>
 	   	WHERE prod_no = #{prodNo}
@@ -51,7 +51,7 @@
 	<select  id="getProductList"  parameterType="search"	resultMap="productSelectMap">
 	  	SELECT *
 	  	FROM (	SELECT inner_table.* , ROWNUM AS row_seq
-	  					FROM		(	SELECT prod_no , price , reg_date
+	  					FROM		(	SELECT prod_no ,prod_name, price , reg_date
 											FROM product
 											<if test="searchCondition != null">
 												<where>
@@ -82,7 +82,7 @@
 	<!--   SQL : SELECT ROW Count	  --> 
 	 <select  id="getTotalCount"  parameterType="search"	 resultType="int">
 	  	SELECT COUNT(*)
-	  	FROM(	SELECT prod_no , price , reg_date
+	  	FROM(	SELECT prod_no , prod_name, price , reg_date
 						FROM product
 						<if test="searchCondition != null">
 							<where>
